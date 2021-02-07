@@ -49,7 +49,7 @@ function run() {
             const file_path = core.getInput('path');
             const file = js_yaml_1.default.load(fs_1.default.readFileSync(file_path, 'utf-8'));
             const values = core.getInput('values');
-            for (const [key, value] of Object.entries(values))
+            for (const [key, value] of Object.entries(JSON.parse(values)))
                 core.setOutput(key, get_1.default(file, value));
         }
         catch (error) {

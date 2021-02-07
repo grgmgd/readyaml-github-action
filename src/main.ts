@@ -8,8 +8,8 @@ async function run(): Promise<void> {
     const file_path: string = core.getInput('path')
     const file = yaml.load(fs.readFileSync(file_path, 'utf-8'))
     const values = core.getInput('values')
-    for (const [key, value] of Object.entries(values))
-      core.setOutput(key, get(file, value))
+    for (const [key, value] of Object.entries(JSON.parse(values)))
+      core.setOutput(key, get(file, value as string))
   } catch (error) {
     core.setFailed(error.message)
   }
