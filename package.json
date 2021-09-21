@@ -30,7 +30,7 @@
     "lodash": "^4.17.20"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.15",
+    "@types/jest": "^27.0.2",
     "@types/js-yaml": "^4.0.0",
     "@types/lodash": "^4.14.168",
     "@types/node": "^14.14.9",
